@@ -11,9 +11,18 @@ class Queue(AbstractQueue):
 
     def enqueue(self, value):
         self.queue.append(value)
+        self.__length += 1
 
     def dequeue(self):
-        return self.queue.pop(0)
+        if self.__length > 0:
+            self.__length -= 1
+            return self.queue.pop(0)
+        return -1
 
     def search(self, index):
+        try:
+            if index < 0 or index > (self.__length - 1):
+                raise IndexError
+        except IndexError:
+            raise IndexError("Índice Inválido ou Inexistente")
         return self.queue[index]
