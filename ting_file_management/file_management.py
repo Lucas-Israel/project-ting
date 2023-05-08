@@ -13,8 +13,3 @@ def txt_importer(path_file):
     except FileNotFoundError:
         print(f"Arquivo {path_file} não encontrado", file=sys.stderr)
     return new_list
-
-
-if __name__ == "__main__":
-    a = txt_importer("statics/arquivo_teste.txt")
-    print(a)
