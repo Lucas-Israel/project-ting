@@ -1,5 +1,4 @@
 from ting_file_management.queue import Queue
-from ting_file_management.file_process import process
 
 
 def exists_word(word: str, instance: Queue):
@@ -42,13 +41,3 @@ def search_by_word(word, instance):
         }
         new_list.append(new_dict)
     return new_list
-
-
-if __name__ == "__main__":
-    a = Queue()
-    process("statics/nome_pedro.txt", a)
-    for num in range(20):
-        print("\n")
-
-    b = search_by_word("Pedro", a)
-    print(b)
