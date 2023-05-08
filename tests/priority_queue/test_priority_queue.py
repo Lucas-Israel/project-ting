@@ -4,7 +4,7 @@ from ting_file_management.file_process import process
 
 
 def test_basic_priority_queueing():
-    len_list = [3, 19]
+    answer_list = [3, 19]
     path_list = [
         "statics/novo_paradigma_globalizado-min.txt",
         "statics/arquivo_teste.txt",
@@ -18,7 +18,7 @@ def test_basic_priority_queueing():
             assert len(prio_q.high_priority) == 1
 
     for index in range(2):
-        assert prio_q.search(index)["qtd_linhas"] == len_list[index]
+        assert prio_q.search(index)["qtd_linhas"] == answer_list[index]
 
     prio_q.dequeue()
 
