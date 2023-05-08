@@ -14,12 +14,12 @@ def exists_word(word: str, instance: Queue):
                 occur.append({"linha": index2 + 1})
         if len(occur) < 1:
             return new_list
-        new_obj = {
+        new_dict = {
             "palavra": word,
             "arquivo": file_name,
             "ocorrencias": occur,
         }
-        new_list.append(new_obj)
+        new_list.append(new_dict)
     return new_list
 
 
